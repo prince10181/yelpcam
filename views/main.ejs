@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <h2 align='center'>welcome to yelpcam </h2>
+        <li><a href='addnew'>click here to add new camp</a></li>
+        <ul>
+        <% for(var i=0;i<camps.length;i++)  {%>
+            
+          <li><%= camps[i].name %></li>
+          
+        <li>  <img src= '<%= camps[i].img %>' > </li>
+          <% } %>  
+         </ul>   
+    </body>
+</html>
