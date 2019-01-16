@@ -1,14 +1,54 @@
 <html>
-    <body>
-        <h2 align='center'>welcome to yelpcam </h2>
-        <li><a href='addnew'>click here to add new camp</a></li>
+    <head>
+        <style>
+            img
+            {
+               height:200px;
+               width:300px;
+            }
+    .button {
+  background-color:'blue';
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+        </style>
+    </head>
+    <body bgcolor='grey'>
+        
+      
+    <h2 align='center'>welcome to yelpcam </h2>
+  <div style="background-color:lightblue; width:70%">
+        <p>Welocme to yelpcam page.<br>
+        Expolore various campgrounds and add new campgrounds here</p>
+        <a href='addnew'>click here to add new camp</a>
+        </div>
+
         <ul>
         <% for(var i=0;i<camps.length;i++)  {%>
             
-          <li><%= camps[i].name %></li>
-          
-        <li>  <img src= '<%= camps[i].img %>' > </li>
+          <div style="width:image width px; display:inline-block; font-size:100%; text-align:center;">
+        <img src= '<%= camps[i].img %>'  style="padding-bottom:0.5em;" />
+          <h6 style="align='center' font-color='blue' "></h6><%= camps[i].name %></h6>
+        <br>
+        
+        
+        <button  >More info</button>
+          </div>
+         
           <% } %>  
-         </ul>   
+         </ul>  
+         
+
+         <script>
+             <% include functions.ejs %>
+         </script>
+         
+
+        
     </body>
 </html>
